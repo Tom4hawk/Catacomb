@@ -1,0 +1,6 @@
+assets/*
+*.TPU
+*.EXE
+obj/CATASM.OBJ
+obj/SOUNDLIB.OBJ
+

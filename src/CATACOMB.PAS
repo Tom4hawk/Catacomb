@@ -38,6 +38,7 @@ Const
   tile4s = tile3s+19*9;
   tile5s = tile4s+19*16;
   lasttile = tile5s+19*25;
+  assetsdir = 'assets/';
 
 Type
 
@@ -1274,7 +1275,7 @@ Var
 
 Begin
   str(level:1,st);
-  filename:=concat ('LEVEL',st,'.CAT');
+  filename:=concat (assetsdir,'LEVEL',st,'.CAT');
 
 tryopen:
 
@@ -1426,7 +1427,7 @@ Var
   iofile : file;
   recs : Integer;
 Begin
-  Assign (iofile,'DEMO.CAT');
+  Assign (iofile,concat(assetsdir,'DEMO.CAT'));
   Reset (iofile,1);
   BlockRead (iofile,democmds,sizeof(democmds),recs);
   Close (iofile);
@@ -1454,7 +1455,7 @@ End;
 
 Procedure LoadSounds;
 Begin
-  SoundData:=Bload ('SOUNDS.CAT');
+  SoundData:=Bload (concat(assetsdir,'SOUNDS.CAT'));
 End;
 
 

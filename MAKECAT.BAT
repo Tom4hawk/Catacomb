@@ -1,3 +1,3 @@
-tasm catasm
-tasm soundlib
-tpc -b catacomb
+tasm src\catasm obj
+tasm src\soundlib obj
+tpc -b src\catacomb -isrc -oobj -usrc -e.
